@@ -18,7 +18,7 @@ return (
             key={todo.id}
               onClick={this.onDelete}>
                 {todo.text}
-                <div className="add-space-left"><span className="delete-icon">x</span></div>
+                <div><span className="delete-icon">x</span></div>
         </li>
       }
     )

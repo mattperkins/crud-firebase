@@ -2,6 +2,10 @@ body{
     background-color: #f1f1f1;
     font:16px/1 'Lato', sans-serif;
 }
+.highlight{
+    background-color: #ff0;
+    padding: 6px;
+}
 .container{
     width: 100%;
     display: flex;
@@ -15,15 +19,10 @@ body{
 }
 /* controls width of list items */
 .wrapper{
-    max-width: 600px;
+    max-width: 450px;
     width: 90%;
     text-align: center;
 }
-.highlight{
-    background-color: #ff0;
-    padding: 6px;
-}
-/* ******************** */
 /* space above and below all list items */
 .todo-list-group{
     margin: 15px 0;
@@ -36,7 +35,7 @@ body{
     font-size: 1.2rem;
     transform: rotate(-6deg);
 }
-
+/* force hover over list-item */
 .todo-list-items{
     position: relative;
     z-index: 1;
@@ -64,7 +63,7 @@ input{
     text-align: center;
 }
 /* 'x' on right hand side of list item */
-.todo-list-items span.delete-icon{
+span.delete-icon{
     position: absolute;
     right: 0;
     top: 0;
@@ -75,10 +74,9 @@ input{
     line-height: 2.2;
     padding: 3px;
     transform: rotate(6deg);
+    display: block;
+    margin-left: 20px;
 }
-/* push list text away from 'x' */
-div.add-space-left {
-    display: inline-block;
-    margin-left: 15px;
-}
+
+
 

@@ -10,3 +10,8 @@
 
 
 ### todo
+#### remove initial list-item when user creates first list item
+#### refactor setState with prevState
+#### add db persistance
+#### x not vertically centered when list becomes multi line
+#### no spacing on right hand side of list item text (cramped against 'x')
