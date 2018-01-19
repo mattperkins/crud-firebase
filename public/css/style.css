@@ -15,3 +15,17 @@ body{
     background-color: #ff0;
     padding: 6px;
 }
+
+/* ******************** */
+.todo-list-group{
+    margin: 15px 0;
+}
+.todo-list-items {
+    padding: 10px;
+    border: 1px solid #ccc;   
+    margin: 2px;
+}
+.todo-list-items:hover{
+    background-color: #ccc;
+    cursor: pointer;
+}

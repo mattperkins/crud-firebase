@@ -1,32 +1,28 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+import List from './components/List'
+import Form from './components/Form'
+
 class App extends React.Component {
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            msg: "..."
+        
+        state = {
+            text: '',
+            todos: [
+                { id: 1, todo: 'Dont not, Walk the dog'},
+                { id: 2, todo: 'Dont not, Walk the cat'},
+                { id: 3, todo: 'Dont not, Walk the goldfish'}
+            ]
         }
-    }
-
-    changeMsg = () => {
-        if (this.state.msg === "Lets get started.") {
-            this.setState({
-                msg: "..."
-            })
-        } else if (this.state.msg === "...") {
-            this.setState({
-                msg: "Lets get started."
-            })
-        }
-    }
 
     render() {
         return (
-            <div className="masthead">
-                <h1 className="pull-up cta-btn" onClick={this.changeMsg}>Hello, World!</h1>
-                <p className="highlight">{this.state.msg}</p>
+            <div className="masthead pull-up">
+                
+                <Form />
+
+                <List todos={this.state.todos} />
+                
             </div>
         )
     }
