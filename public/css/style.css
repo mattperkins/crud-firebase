@@ -2,39 +2,68 @@ body{
     background-color: #f1f1f1;
     font:16px/1 'Lato', sans-serif;
 }
-.masthead{
-    height: 100vh;
+.container{
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
-.pull-up{
-    margin-top: -100px;
+/* to compensate for fixed input box at top of page */
+.push-down{
+    margin-top: 100px;
+}
+/* controls width of list items */
+.wrapper{
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
 }
 .highlight{
     background-color: #ff0;
     padding: 6px;
 }
-
 /* ******************** */
+/* space above and below all list items */
 .todo-list-group{
     margin: 15px 0;
 }
+/* generic styles for list items and input text box */
 .todo-list-items, input {
     padding: 10px;
     border: 1px solid #fff;   
     margin: 2px;
     font-size: 1.2rem;
-    position: relative;
+    transform: rotate(-6deg);
 }
+
+.todo-list-items{
+    position: relative;
+    z-index: 1;
+}
+/* turn list item red and rotate straight */
+.todo-list-items:hover{
+    background-color: #ff0000;
+    border: 1px solid #ff0000;   
+    transition: .1s ease-in-out;
+    color: #fff;
+    cursor: pointer;
+    transform: rotate(0deg);
+    z-index: 2;
+}
+/* Text box where you add new items */
 input{
     border: 0;
+    transform: rotate(0deg);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    z-index: 10;
+    text-align: center;
 }
-.todo-list-items:hover{
-    background-color: #ccc;
-    cursor: pointer;
-}
+/* 'x' on right hand side of list item */
 .todo-list-items span.delete-icon{
     position: absolute;
     right: 0;
@@ -45,13 +74,11 @@ input{
     font-size: .9rem;
     line-height: 2.2;
     padding: 3px;
+    transform: rotate(6deg);
 }
-a.add-space-left {
+/* push list text away from 'x' */
+div.add-space-left {
     display: inline-block;
     margin-left: 15px;
 }
-.label{
-    display: block;
-    text-align: right;
-    margin-bottom: 6px;
-}
+

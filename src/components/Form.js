@@ -19,14 +19,19 @@ onSubmit = (e)=>{
 }
 
 render() {
-
+const cta = 'Enter your text here'
 return (
     <div>
   
       <form onSubmit={this.onSubmit}>
         <div>
-          <label className="label">Add a reminder</label>
-          <input type="text" ref="text" onChange={this.onChange}/>
+            
+              <input 
+                placeholder={cta} 
+                  type="text" 
+                    ref="text" 
+                      onChange={this.onChange}/>
+        
         </div>
       </form>
     

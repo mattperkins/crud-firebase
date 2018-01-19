@@ -5,15 +5,14 @@ import List from './components/List'
 import Form from './components/Form'
 
 class App extends React.Component {
-
+    // initial state
         state = {
             todos: [
-                { id: 1, text: 'Dont not, Walk the dog'},
-                { id: 2, text: 'Dont not, Walk the cat'},
-                { id: 3, text: 'Dont not, Walk the goldfish'}
+                { id: 1, text: '?'},
             ]
         }
 
+    // add list item
     handleOnTodoAdd = (text) => {
         let newTodo = {
             id: this.state.todos.length + 1,
@@ -25,15 +24,30 @@ class App extends React.Component {
         })
     }
 
+    // remove list item
+    handleDeleteListItem = (todo) => {
+        let todos = this.state.todos
+        
+        todos.splice(todos.indexOf(todo), 1)
+
+        this.setState({
+            todos
+        })
+    }
+
     render() {
         return (
-            <div className="masthead pull-up">
-                
-                <Form onTodoAdd={this.handleOnTodoAdd}/>
+            
+            <div className="container push-down">
+            
+            <div className="wrapper">
+            <Form onTodoAdd={this.handleOnTodoAdd}/>
 
-                <List todos={this.state.todos} />
-                
+            <List todos={this.state.todos} deleteListItem={this.handleDeleteListItem}/>
             </div>
+
+            </div>
+            
         )
     }
 }

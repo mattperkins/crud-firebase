@@ -1,25 +1,31 @@
 import React from 'react'
- 
-export default ({todos}) => {
-return (
-<div>
+class List extends React.Component {
 
-  <ul className="todo-list-group">
+onDelete = (todo)=>{
+    this.props.deleteListItem(todo)
+  }
+
+render() {
+
+return (
+    <div>
+        <ul className="todo-list-group">
   {
-    todos.map( todo => {
+    this.props.todos.map( todo => {
         return <li
         className="todo-list-items" 
           todo={todo} 
-            key={todo.id}>
-              {todo.text}
-                <a href="#" className="add-space-left"><span className="delete-icon">x</span></a>
+            key={todo.id}
+              onClick={this.onDelete}>
+                {todo.text}
+                <div className="add-space-left"><span className="delete-icon">x</span></div>
         </li>
       }
     )
   }
   </ul>
-
-</div>
+    </div>
 )
 }
- 
+}
+export default List
