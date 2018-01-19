@@ -11,7 +11,7 @@ return (
         className="todo-list-items" 
           todo={todo} 
             key={todo.id}>
-              {todo.todo}
+              {todo.text}
         </li>
       }
     )

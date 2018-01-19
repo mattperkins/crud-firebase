@@ -7,11 +7,10 @@ import Form from './components/Form'
 class App extends React.Component {
         
         state = {
-            text: '',
             todos: [
-                { id: 1, todo: 'Dont not, Walk the dog'},
-                { id: 2, todo: 'Dont not, Walk the cat'},
-                { id: 3, todo: 'Dont not, Walk the goldfish'}
+                { id: 1, text: 'Dont not, Walk the dog'},
+                { id: 2, text: 'Dont not, Walk the cat'},
+                { id: 3, text: 'Dont not, Walk the goldfish'}
             ]
         }
 
