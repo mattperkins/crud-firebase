@@ -5,7 +5,7 @@ import List from './components/List'
 import Form from './components/Form'
 
 class App extends React.Component {
-        
+
         state = {
             todos: [
                 { id: 1, text: 'Dont not, Walk the dog'},
@@ -14,11 +14,22 @@ class App extends React.Component {
             ]
         }
 
+    handleOnTodoAdd = (text) => {
+        let newTodo = {
+            id: this.state.todos.length + 1,
+            text: text
+        }
+
+        this.setState({
+            todos: this.state.todos.concat(newTodo)
+        })
+    }
+
     render() {
         return (
             <div className="masthead pull-up">
                 
-                <Form />
+                <Form onTodoAdd={this.handleOnTodoAdd}/>
 
                 <List todos={this.state.todos} />
                 

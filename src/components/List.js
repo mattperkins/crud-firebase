@@ -12,6 +12,7 @@ return (
           todo={todo} 
             key={todo.id}>
               {todo.text}
+                <a href="#" className="add-space-left"><span className="delete-icon">x</span></a>
         </li>
       }
     )
