@@ -10,6 +10,7 @@
 
 
 ### todo
+#### delete not working correctly ? not exact!
 #### remove initial list-item when user creates first list item
 #### refactor setState with prevState
 #### add db persistance
@@ -18,3 +19,4 @@
 #### flickering on hover -- expand active area
 #### add instructions on usage
 #### add media queries and refactor UI for mobile
+
