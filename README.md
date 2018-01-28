@@ -13,7 +13,7 @@
 #### delete not working correctly ? not exact!
 #### remove initial list-item when user creates first list item
 #### refactor setState with prevState
-#### add db persistance
+#### ADD db persistance
 #### x not vertically centered when list becomes multi line
 #### no spacing on right hand side of list item text (cramped against 'x')
 #### flickering on hover -- expand active area
